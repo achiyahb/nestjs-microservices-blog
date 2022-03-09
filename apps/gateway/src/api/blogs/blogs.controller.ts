@@ -1,7 +1,7 @@
 import { Body, Controller, Get, Inject, Post, Query } from '@nestjs/common';
-import { ServicesConnectionTokens } from '../../../../../libs/enums/services-connection-tokens';
+import { ServicesConnectionTokens } from '@enums/services-connection-tokens';
 import { ClientProxy } from '@nestjs/microservices';
-import { BlogEndpointsEnum } from '../../../../../libs/tcp-endpoints/blog-endpoints.enum';
+import { BlogEndpointsEnum } from '@endpoints/blog-endpoints.enum';
 import { CreateBlogDto } from './dtos/create-blog.dto';
 import { firstValueFrom } from 'rxjs';
 

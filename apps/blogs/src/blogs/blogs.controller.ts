@@ -1,15 +1,15 @@
 import { Body, Controller } from '@nestjs/common';
 import { BlogsService } from './blogs.service';
 import { MessagePattern } from '@nestjs/microservices';
-import { BlogEndpointsEnum } from '@libs/tcp-endpoints/blog-endpoints.enum';
 import { CreateBlogInterface } from './interfaces/create-blog.interface';
+import { BlogEndpointsEnum } from '@endpoints/blog-endpoints.enum';
 
 @Controller()
 export class BlogsController {
   constructor(private readonly blogsService: BlogsService) {}
 
   @MessagePattern(BlogEndpointsEnum.GET_BLOGS)
-  getAllBlogs(@Body('authorId') authorId?: number) {
+  getAllBlogs(@Body('authorId') authorId?: string) {
     return this.blogsService.getBlogs(authorId);
   }
 

@@ -1,10 +1,10 @@
 import { Module } from '@nestjs/common';
 import { MongooseModule } from '@nestjs/mongoose';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { blogsConfig } from '@config/configs/services-config/blogs-config';
+import { blogsConfig } from '@configs/services-config/blogs-config';
 import { PostsModule } from './posts/posts.module';
 import { BlogsModule } from './blogs/blogs.module';
-import { mongodbConfig } from '@config/configs/mongodb-config';
+import { mongodbConfig } from '@configs/mongodb-config';
 
 @Module({
   imports: [

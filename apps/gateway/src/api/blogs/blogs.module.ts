@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { BlogsController } from './blogs.controller';
-import { ServicesConnectionTokens } from '../../../../../libs/enums/services-connection-tokens';
+import { ServicesConnectionTokens } from '@enums/services-connection-tokens';
 import { ConfigService } from '@nestjs/config';
 import { ClientProxyFactory } from '@nestjs/microservices';
 
