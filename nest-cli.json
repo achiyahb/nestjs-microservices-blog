@@ -4,7 +4,7 @@
   "monorepo": true,
   "root": "apps/microservices-backend-blog",
   "compilerOptions": {
-    "webpack": true,
+    "webpack": false,
     "tsConfigPath": "apps/microservices-backend-blog/tsconfig.app.json"
   },
   "projects": {
@@ -69,6 +69,15 @@
       "sourceRoot": "apps/blogs/src",
       "compilerOptions": {
         "tsConfigPath": "apps/blogs/tsconfig.app.json"
+      }
+    },
+    "configs": {
+      "type": "library",
+      "root": "libs/configs",
+      "entryFile": "index",
+      "sourceRoot": "libs/configs/src",
+      "compilerOptions": {
+        "tsConfigPath": "libs/configs/tsconfig.lib.json"
       }
     }
   }
