@@ -1,24 +1,40 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
+import { PostsDocument } from '../posts/posts.schema';
 
 export type BlogsDocument = Blogs & Document;
 
 @Schema()
 export class Blogs {
-  @Prop()
+  @Prop({
+    type: String,
+  })
   name: string;
 
-  @Prop()
+  @Prop({
+    type: String,
+  })
   description: string;
 
-  @Prop()
+  @Prop({
+    type: String,
+  })
   title: string;
 
-  @Prop()
+  @Prop({
+    type: Number,
+  })
   authorId: number;
 
-  @Prop()
+  @Prop({
+    type: String,
+  })
   mainImage: string;
+
+  @Prop({
+    type: Array,
+  })
+  Posts: PostsDocument[];
 }
 
 export const BlogsSchema = SchemaFactory.createForClass(Blogs);
