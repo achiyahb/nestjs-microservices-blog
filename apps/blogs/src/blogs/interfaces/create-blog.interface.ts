@@ -3,4 +3,5 @@ export interface CreateBlogInterface {
   title: string;
   authorId: number;
   mainImage: string;
+  description: string;
 }

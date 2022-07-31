@@ -3,7 +3,7 @@ import { GatewayController } from './gateway.controller';
 import { GatewayService } from './gateway.service';
 import { ApiModule } from './api/api.module';
 import { ConfigModule } from '@nestjs/config';
-import { blogsConfig } from '@config/configs/services-config/blogs-config';
+import { blogsConfig } from '@configs/services-config/blogs-config';
 
 @Module({
   imports: [

@@ -17,4 +17,8 @@ export class BlogsService {
   getBlogs(authorId?: string) {
     return this.blogModel.find(authorId && { authorId }).exec();
   }
+
+  async findBlogById(blogId: string) {
+    return this.blogModel.findById(blogId).exec();
+  }
 }
