@@ -9,4 +9,8 @@ export class PostsService {
   async createPost(postData: PostInterface, blogId: string) {
     return this.blogService.findBlogById(blogId);
   }
+
+  async getPostById(postId: string, blogId: string) {
+    return this.blogService.findBlogById(blogId);
+  }
 }

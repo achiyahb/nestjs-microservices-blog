@@ -1,10 +1,10 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
 
-export type PostsDocument = Post & Document;
+export type PostsDocument = Posts & Document;
 
 @Schema()
-export class Post {
+export class Posts {
   @Prop({
     type: String,
   })
@@ -51,4 +51,4 @@ export class Post {
   updatedAt: string;
 }
 
-export const PostsSchema = SchemaFactory.createForClass(Post);
+export const PostsSchema = SchemaFactory.createForClass(Posts);

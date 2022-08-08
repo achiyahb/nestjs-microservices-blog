@@ -1,6 +1,6 @@
 import { Prop, Schema, SchemaFactory } from '@nestjs/mongoose';
 import { Document } from 'mongoose';
-import { PostsDocument } from '../posts/posts.schema';
+import { PostsDetailsDocument } from './posts-details.schema';
 
 export type BlogsDocument = Blogs & Document;
 
@@ -34,7 +34,7 @@ export class Blogs {
   @Prop({
     type: Array,
   })
-  Posts: PostsDocument[];
+  PostsDetails: PostsDetailsDocument[];
 }
 
 export const BlogsSchema = SchemaFactory.createForClass(Blogs);
