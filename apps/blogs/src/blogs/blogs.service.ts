@@ -21,4 +21,14 @@ export class BlogsService {
   async findBlogById(blogId: string) {
     return this.blogModel.findById(blogId).exec();
   }
+
+  async updateBlog(blogId: string, blogData: CreateBlogInterface) {
+    return this.blogModel
+      .findByIdAndUpdate(blogId, blogData, { new: true })
+      .exec();
+  }
+
+  async deleteBlog(blogId: string) {
+    return this.blogModel.findByIdAndDelete(blogId).exec();
+  }
 }
